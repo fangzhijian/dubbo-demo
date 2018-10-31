@@ -1,0 +1,9 @@
+*.iml
+*.log
+.idea/
+target/
+.settings/
+.classpath
+.project
+ignore-*/
+*Test.java

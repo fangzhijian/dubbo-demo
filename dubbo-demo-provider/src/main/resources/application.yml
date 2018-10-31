@@ -1,0 +1,17 @@
+server:
+  port: 9988
+dubbo:
+  application:
+    name: demo-provider
+  registry:
+    address: 127.0.0.1:2181
+    protocol: zookeeper
+  protocol:
+    name: dubbo
+    port: 20881
+  provider:
+    version: 123
+    timeout: 5000
+  consumer:
+    version: 123
+    timeout: 5000

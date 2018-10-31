@@ -1,0 +1,18 @@
+server:
+  port: 8090
+dubbo:
+  application:
+    name: demo-customer
+  registry:
+    address: 127.0.0.1:2181
+    protocol: zookeeper
+  protocol:
+    name: dubbo
+    port: 20882
+  consumer:
+    version: 123
+    timeout: 5000
+spring:
+  gson:
+    date-format: yyyy-MM-dd HH:ss:mm
+    serialize-nulls: true
