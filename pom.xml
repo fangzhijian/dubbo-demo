@@ -17,14 +17,17 @@
     </parent>
 
     <modules>
-        <module>dubbo-demo-provider</module>
         <module>dubbo-demo-api</module>
+        <module>dubbo-demo-provider</module>
+        <module>dubbo-demo-customer</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <!--跳过maven打包时启动spring-boot项目-->
+        <skipTests>true</skipTests>
     </properties>
 
     <dependencies>
@@ -45,4 +48,6 @@
         </dependency>
 
     </dependencies>
+
+
 </project>

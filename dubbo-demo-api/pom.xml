@@ -11,22 +11,12 @@
 
 	<artifactId>dubbo-demo-api</artifactId>
 	<packaging>jar</packaging>
-	<name>dubbo-demo-api</name>
 	<description>公共包</description>
 
 
 	<dependencies>
 
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 
 
 </project>
