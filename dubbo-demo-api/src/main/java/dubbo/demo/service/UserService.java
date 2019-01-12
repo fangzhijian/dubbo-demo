@@ -9,4 +9,6 @@ import dubbo.demo.model.User;
 public interface UserService {
 
     User getUserById(Integer id);
+
+    void deleteUser(Integer id);
 }

@@ -1,17 +1,23 @@
 server:
-  port: 9988
+  port: 9989
 dubbo:
   application:
     name: demo-provider
+    qos-accept-foreign-ip: false   #禁用在线运维命令
+    qos-enable: false               #禁用在线运维命令
+    logger: slf4j
   registry:
-    address: 127.0.0.1:2181
+    address: 192.168.0.202:2181
     protocol: zookeeper
   protocol:
     name: dubbo
-    port: 20881
+    port: 28889
   provider:
-    version: 123
-    timeout: 5000
+    version: 7.0.0
+    timeout: 6000
+    retries: 0
   consumer:
-    version: 123
-    timeout: 5000
+    version: 7.0.0
+    timeout: 6000
+    retries: 0
+    check: false

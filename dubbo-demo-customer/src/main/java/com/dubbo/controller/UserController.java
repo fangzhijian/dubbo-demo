@@ -13,12 +13,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    @Reference
+    @Reference(version = "6.66", parameters = "getUserById.retries=4")
     private UserService userService;
+
 
     @GetMapping("getUserInfo")
     public User getUserInfo(){
-        return userService.getUserById(1);
+        long startTime = System.currentTimeMillis();
+        User userById = userService.getUserById(1);
+        System.out.println(System.currentTimeMillis()-startTime);
+        return userById;
+    }
+
+    @GetMapping("delete")
+    public String delete(int i){
+        userService.deleteUser(i);
+        return "好嗨哦";
     }
 
 }

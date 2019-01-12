@@ -2,17 +2,18 @@ server:
   port: 8090
 dubbo:
   application:
-    name: demo-customer
+    name: demo-consumer
+    qos-accept-foreign-ip: false   #禁用在线运维命令
+    qos-enable: false               #禁用在线运维命令
+    logger: slf4j
   registry:
-    address: 127.0.0.1:2181
+    address: 192.168.0.202:2181
     protocol: zookeeper
-  protocol:
-    name: dubbo
-    port: 20882
   consumer:
-    version: 123
-    timeout: 5000
+    check: false                     #设置false不然只能先启动提供者
+    version: 7.0.0
+    timeout: 2000
+    retries: 2
 spring:
   gson:
     date-format: yyyy-MM-dd HH:ss:mm
-    serialize-nulls: true
