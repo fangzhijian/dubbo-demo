@@ -7,7 +7,7 @@ dubbo:
     qos-enable: false               #禁用在线运维命令
     logger: slf4j
   registry:
-    address: 192.168.0.202:2181
+    address: 127.0.0.1:2181
     protocol: zookeeper
   protocol:
     name: dubbo

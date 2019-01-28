@@ -31,4 +31,9 @@ public class UserController {
         return "好嗨哦";
     }
 
+    @GetMapping("getName")
+    public String getName(){
+        return userService.getUserName();
+    }
+
 }
